@@ -5,22 +5,68 @@
 }
 
 body {
+    color: white;
+    font-family: figtree;
+}
+
+.header {
     background-image: url(Pictures/Background\ landing\ page.jpeg);
     background-size: cover;
-    color: white;
-    text-transform: uppercase;
+    background-position: center;
+    height: 70vh;
+    position: relative; 
 }
+
+.overlay {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2); 
+    pointer-events: none; 
+    z-index: 1; 
+}
+
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
     padding: 20px 20px 50px 20px;
+    z-index: 2;
+    text-transform: uppercase;
 }
 
-.nav-links li {
-    display: inline-block;
-    padding-right: 30px;
+.main-title-box {
+    text-align: center;
+    padding-top: 90px;
+    z-index: 2;
+}
+
+.main-title {
+    font-size: 68px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 24px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links div,p {
+    display: inline;
+    margin: 0 20px;
+    font-size: 13px;
 }
 
 .nav-links a {
@@ -28,25 +74,50 @@ body {
     text-decoration: none;
 }
 
-.main-title-box {
-    text-align: center;
-    padding-top: 50px;
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
 
 .navbar-title {
+    font-size: 20px;
 }
 
 .contact-button {
-    
+    background-color: white;
+    color: #25836c;
+    padding: 15px;
+    border-radius: 30px;
+
 }
 
 
 
 @media (max-width: 600px) {
     .nav-links {
-        display:none;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav-links div,p {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu-icon:checked ~ .nav-links {
+        display: flex;
     }
 
 }
-    
-
