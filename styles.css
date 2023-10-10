@@ -17,6 +17,11 @@ body {
     position: relative; 
 }
 
+/* .first-segment {
+    display: flex;
+    justify-content: center;
+} */
+
 .overlay {
     position: absolute; 
     top: 0;
@@ -47,12 +52,14 @@ body {
 .main-title {
     font-size: 68px;
     text-transform: uppercase;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .subtitle {
     font-style: italic;
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: lighter;
+    
 }
 
 .menu-icon {
@@ -63,13 +70,13 @@ body {
     list-style-type: none;
 }
 
-.nav-links div,p {
+.nav-links li {
     display: inline;
     margin: 0 20px;
     font-size: 13px;
 }
 
-.nav-links a {
+a {
     color: white;
     text-decoration: none;
 }
@@ -91,11 +98,21 @@ body {
 
 }
 
+.donate-button {
+    background-color: #25836c;
+    color: white;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 90px auto;
+    text-align: center;
+    width: 10%;
+}
 
-
-@media (max-width: 600px) {
+@media (max-width: 1170px) {
     .nav-links {
-        display: none;
+        display: none;<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;500;600;700&display=swap" rel="stylesheet">
         position: absolute;
         top: 60px;
         left: 0;
@@ -107,7 +124,7 @@ body {
         padding: 0;
     }
 
-    .nav-links div,p {
+    .nav-links li {
         display: block;
         margin: 10px 0;
     }
